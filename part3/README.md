@@ -10,11 +10,11 @@ gcloud container clusters get-credentials handson-cluster --zone us-central1-a -
 
 ## Deploymentを作成
 
-### yamlを作成
+### hellotime-deployment.yaml を作成
 
 hellotime container imageをPodとして持つReplicaを1つ宣言するシンプルなDeploymentを作成します。
 {your GCR image path} のところをPart2で作成したcontainer imageのpathに差し替えてください。
-例えば `gcr.io/souzoh-demo-gcp-001/sinmetal/hellotime/manual:v1.0.0` のような値です。
+例えば `gcr.io/handson-sinmetal/sinmetal/hellotime/manual:v1.0.0` のような値です。
 
 ``` hellotime-deployment.yaml
 apiVersion: extensions/v1beta1
@@ -35,7 +35,7 @@ spec:
         name: hellotime-node
 ```
 
-### yamlの適用
+### hellotime-deployment.yaml の適用
 
 `kubectl apply` を利用して、作成したdeploymentを適用します。
 
