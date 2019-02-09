@@ -84,7 +84,7 @@ gcloud builds list --limit 5
 ### backendhellotime-deployment.yaml を作成
 
 backendhellotime container imageをPodとして持つReplicaを2つ宣言するシンプルなDeploymentを作成します。
-{your GCR image path} のところをPart2で作成したcontainer imageのpathに差し替えてください。
+{your GCR image path} のところを先程 `Cloud Buildの実行` で作成したcontainer imageのpathに差し替えてください。
 例えば `gcr.io/handson-sinmetal/sinmetal/backendhellotime/manual:v1.0.0` のような値です。
 
 ``` backendhellotime-deployment.yaml
