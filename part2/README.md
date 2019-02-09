@@ -3,7 +3,7 @@
 ## sample codeの取得
 
 ```
-git clone git@github.com:gopherdojo/gcp_hellotime.git
+git clone https://github.com/sinmetal/hellotime.git
 ```
 
 Hello {Time}を標準出力に5sec毎に出力するシンプルなアプリケーションです。
