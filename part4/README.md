@@ -184,6 +184,13 @@ ServiceはGKE内部のDNSを利用して、アクセスすることができる�
 ```
 package main
 
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+	"time"
+)
+
 func main() {
 	for {
 		res, err := http.Get("http://backendhellotime-service.default.svc.cluster.local:8080")
