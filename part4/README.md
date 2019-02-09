@@ -7,7 +7,7 @@
 HTTP Requestを受け取り Hello Backend {Time}を返す、シンプルなアプリケーションです。
 
 ```
-git clone git@github.com:gopherdojo/gcp_backendhellotime.git
+git clone https://github.com/sinmetal/backendhellotime.git
 ```
 
 ```
