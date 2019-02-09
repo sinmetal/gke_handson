@@ -95,7 +95,7 @@ metadata:
     name: backendhellotime-node
   name: backendhellotime-node
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
