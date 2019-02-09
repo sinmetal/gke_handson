@@ -81,11 +81,11 @@ gcloud builds list --limit 5
 
 ## Deploymentを作成
 
-### yamlを作成
+### backendhellotime-deployment.yaml を作成
 
 backendhellotime container imageをPodとして持つReplicaを2つ宣言するシンプルなDeploymentを作成します。
 {your GCR image path} のところをPart2で作成したcontainer imageのpathに差し替えてください。
-例えば `gcr.io/souzoh-demo-gcp-001/sinmetal/backendhellotime/manual:v1.0.0` のような値です。
+例えば `gcr.io/handson-sinmetal/sinmetal/backendhellotime/manual:v1.0.0` のような値です。
 
 ``` backendhellotime-deployment.yaml
 apiVersion: extensions/v1beta1
@@ -106,7 +106,7 @@ spec:
         name: backendhellotime-node
 ```
 
-### yamlの適用
+### backendhellotime-deployment.yaml の適用
 
 `kubectl apply` を利用して、作成したdeploymentを適用します。
 
@@ -129,7 +129,7 @@ hellotime-node-7dbc587dcd-4l7w2          1/1       Running   0          6m
 backendhellotimeはhellotimeから呼ばれるものなので、Serviceを作成します。
 backendhellotimeのアプリケーションは8080をListenしているので、 `NodePort:8080` を指定します。
 
-### yamlを作成
+### backendhellotime-service.yaml を作成
 
 selectorとして `backendhellotime-node` を指定します。
 portはNodeもContainer Imageも両方共8080をListenとします。
@@ -151,7 +151,7 @@ spec:
     name: backendhellotime-node
 ```
 
-### yamlを適用
+### backendhellotime-service.yaml を適用
 
 `kubectl apply` を利用して、作成したserviceを適用します。
 
