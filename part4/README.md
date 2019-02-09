@@ -182,6 +182,8 @@ ServiceはGKE内部のDNSを利用して、アクセスすることができる�
 以下のようにhellotimeの中身を変えてみよう。
 
 ```
+package main
+
 func main() {
 	for {
 		res, err := http.Get("http://backendhellotime-service.default.svc.cluster.local:8080")
